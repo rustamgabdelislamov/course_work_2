@@ -890,5 +890,17 @@
         "link": "https://hh.ru/vacancy/122784899",
         "salary": null,
         "description": "Знание SQL, опыт его применения в работе. Работа с базами данных. Знание <highlighttext>Python</highlighttext> приветствуется, но не обязательно. Базовые знания бухгалтерского..."
+    },
+    {
+        "name": "Python-разработчик",
+        "link": "https://hh.ru/vacancy/122790180",
+        "salary": null,
+        "description": "Уверенное владение <highlighttext>Python</highlighttext> (3+). Опыт разработки веб-приложений. SQL, Git, Linux на продвинутом уровне. Понимание алгоритмов и структур данных. "
+    },
+    {
+        "name": "Разработчик C# / JavaScript / SQL в отдел трансформации бизнеса",
+        "link": "https://hh.ru/vacancy/122792305",
+        "salary": null,
+        "description": "Опыт от 6 месяцев с C#, JavaScript, T-SQL (или PL-SQL). Понимание архитектуры веб-приложений и баз данных. "
     }
 ]

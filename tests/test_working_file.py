@@ -75,7 +75,7 @@ def test_read_vacancies():
             "salary": {"from": 800, "to": 1200},
             "description": "Ищем специалиста по JavaScript."
         }
-    ]) # json.dumps() используется для сериализации Python-объекта (в данном случае списка словарей) в строку JSON.
+    ])  # json.dumps() используется для сериализации Python-объекта (в данном случае списка словарей) в строку JSON.
 
     with patch('builtins.open', mock_open(read_data=mock_data)):
         vacancies = saver.read_vacancies()
@@ -92,10 +92,3 @@ def test_read_vacancies():
         assert vacancies[1].salary['from'] == 800
         assert vacancies[1].salary['to'] == 1200
         assert vacancies[1].description == "Ищем специалиста по JavaScript."
-
-
-
-
-
-
-

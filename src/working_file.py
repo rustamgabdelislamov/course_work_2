@@ -27,7 +27,8 @@ class JsonSaver(AbstractFile):
         try:
             with open(self.__file_path, 'r', encoding='utf-8') as x:
                 existing_data = json.load(x)
-                existing_links = {vacancy['link'] for vacancy in existing_data}  # Сохраняем ссылки существующих вакансий
+                existing_links = {vacancy['link'] for vacancy in existing_data}  # Сохраняем ссылки существующих
+                # вакансий
         except FileNotFoundError:
             existing_data = []
             existing_links = set()  # Если файл не найден, создаем пустое множество

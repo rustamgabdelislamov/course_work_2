@@ -41,7 +41,8 @@ class Vacancy:
         return self.salary_from < other.salary_from
 
     def __repr__(self):
-        return f"Vacancy(Название: {self.name}, Ссылка: {self.link}, Зарплата: {self.salary_from} - {self.salary_to}, Описание: {self.description})"
+        return (f"Vacancy(Название: {self.name}, Ссылка: {self.link}, Зарплата: {self.salary_from} - {self.salary_to},"
+                f"Описание: {self.description})")
 
     def __str__(self):
         return f"""Название: {self.name}{"\n"}Ссылка: {self.link}{"\n"}Зарплата: {self.salary_from} - {self.salary_to}

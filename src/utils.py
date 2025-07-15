@@ -28,10 +28,14 @@ def filter_vacancies(vacancies, filter_words):
     filtered_vacancies = []
 
     for vacancy in vacancies:
-        # Проверяем название и описание на наличие ключевых слов
-        if (any(word.lower() in vacancy.name.lower() for word in filter_words)
-                or (vacancy.description and isinstance(vacancy.description, str) and
-            any(word.lower() in vacancy.description.lower() for word in filter_words))):
+        name_matches = any(word.lower() in vacancy.name.lower() for word in filter_words)
+        description_matches = (
+                vacancy.description and
+                isinstance(vacancy.description, str) and
+                any(word.lower() in vacancy.description.lower() for word in filter_words)
+        )
+
+        if name_matches or description_matches:
             filtered_vacancies.append(vacancy)
 
     return filtered_vacancies
@@ -54,9 +58,11 @@ def get_vacancies_by_salary(vacancies_list, salary_range_str, top_n):
 
     filtered_vacancies = [
         vacancy for vacancy in vacancies_list
-        if vacancy.salary_from is not None and vacancy.salary_to is not None and vacancy.salary_from != 0
-           and vacancy.salary_to != 0 and
-           (vacancy.salary_from <= salary_to and vacancy.salary_to >= salary_from)
-    ]
+        if (vacancy.salary_from is not None
+            and vacancy.salary_to is not None
+            and vacancy.salary_from != 0
+            and vacancy.salary_to != 0 and
+            (vacancy.salary_from <= salary_to and vacancy.salary_to >= salary_from)
+            )]
     sorted_vacancies = sorted(filtered_vacancies, key=lambda x: x. salary_from, reverse=True)[:top_n]
     return sorted_vacancies

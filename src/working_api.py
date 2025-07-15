@@ -22,4 +22,3 @@ class HH(AbstractApi):
             all_vacancies.extend(vacancies)
             self.__params["page"] += 1
         return all_vacancies
-

@@ -17,23 +17,21 @@ def test_determining_time_day_success_():
 
 
 def test_filter_vacancies():
-    vacancy1 = Vacancy("QA Engineer", "https://hh.ru/vacancy/122023399",0,
-                      "Знание языков программирования для написания автоматизированных тестов.")
-    vacancy2 = Vacancy("Стажёр — менеджер продукта","https://hh.ru/vacancy/121950103",{
-            "from": 80000,
-            "to": 80000,
-            "currency": "RUR",
-            "gross": "true"
-        },
-    "Опыт работы с облачными платформами (AWS, Google, Yandex, VK, Sber")
+    vacancy1 = Vacancy("QA Engineer", "https://hh.ru/vacancy/122023399", 0,
+                       "Знание языков программирования для написания автоматизированных тестов.")
+    vacancy2 = Vacancy("Стажёр — менеджер продукта", "https://hh.ru/vacancy/121950103", {
+                        "from": 80000,
+                        "to": 80000,
+                        "currency": "RUR",
+                        "gross": "true"
+                    },
+                       "Опыт работы с облачными платформами (AWS, Google, Yandex, VK, Sber")
 
     vacancy_list = [vacancy1, vacancy2]
 
     result = filter_vacancies(vacancy_list, ["Qa"])
 
-    expected = [Vacancy("QA Engineer", "https://hh.ru/vacancy/122023399",0,
-                      "Знание языков программирования для написания автоматизированных тестов.")]
+    expected = [Vacancy("QA Engineer", "https://hh.ru/vacancy/122023399", 0,
+                        "Знание языков программирования для написания автоматизированных тестов.")]
 
     assert result == expected
-
-

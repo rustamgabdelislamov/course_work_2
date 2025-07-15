@@ -31,5 +31,3 @@ class AbstractFile(ABC):
     @abstractmethod
     def delete_vacancies(self, key):
         pass
-
-

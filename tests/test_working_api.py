@@ -2,6 +2,7 @@ from src.working_api import HH
 from unittest.mock import patch
 from requests import Response
 
+
 @patch("requests.get")
 def test_hh_connect(mock_get):
     """Тест ответа от сервера"""
@@ -36,10 +37,6 @@ def test_get_vacancies(mock_get):
     ]
 
     # Вызов метода get_vacancies
-    result = hh.get_vacancies("python",1) # ставим 1 чтобы только первую страницу вызвать
+    result = hh.get_vacancies("python", 1)  # ставим 1 чтобы только первую страницу вызвать
 
     assert expected_result == result
-
-
-
-
