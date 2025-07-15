@@ -3,12 +3,13 @@ from src.working_api import HH
 from src.working_file import JsonSaver
 from src.utils import filter_vacancies
 
+
 def user_interaction():
         print(f'{determining_time_day()}!!! Добро пожаловать в программу работы с вакансиями.')
         print('''Выберите необходимый пункт меню:
-                          1. Вывести все вакансии.
-                          2. Вывести отфильтрованные вакансии по имени или описанию.
-                          3. Вывести отфильтрованные вакансии зарплате''')
+                1. Вывести все вакансии.
+                2. Вывести отфильтрованные вакансии по имени или описанию.
+                3. Вывести отфильтрованные вакансии зарплате''')
 
         input_menu = int(input())
         if input_menu == 1:
