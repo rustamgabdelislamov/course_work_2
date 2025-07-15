@@ -28,6 +28,14 @@ class Vacancy:
             self.salary_from = 0
             self.salary_to = 0
 
+    def __eq__(self, other):
+        if not isinstance(other, Vacancy):
+            return NotImplemented
+        return (self.name == other.name and
+                self.link == other.link and
+                self.salary == other.salary and
+                self.description == other.description)
+
     def __lt__(self, other):
         """<"""
         return self.salary_from < other.salary_from
