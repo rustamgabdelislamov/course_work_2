@@ -1,13 +1,12 @@
 class Vacancy:
     """Класс для работы с вакансиями"""
-    slots = ("_name", "link", "salary", "description")
+    __slots__ = ("_name", "link", "salary", "salary_from", "salary_to", "description")
 
     def __init__(self, name, link, salary, description):
         self.name = name
         self.link = link
-        self.salary = salary
         self.description = description
-        self.__validate(self.salary)  # Вызов метода валидации
+        self.__validate(salary)  # Вызов метода валидации
 
     @property
     def name(self):
@@ -22,7 +21,7 @@ class Vacancy:
     def __validate(self, salary):
         """Метод для валидации и установки значений зарплаты"""
         if salary:
-            self.salary_from = salary.get("from", 0)  # Используем get для безопасного извлечения
+            self.salary_from = salary["from"] if salary["from"] else 0  # Используем get для безопасного извлечения
             self.salary_to = salary.get("to", 0)
         else:
             self.salary_from = 0
