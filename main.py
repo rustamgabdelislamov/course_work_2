@@ -8,11 +8,11 @@ def user_interaction():
     print(f'{determining_time_day()}!!! Добро пожаловать в программу работы с вакансиями.')
     input_search = input('Введите поисковый запрос для запроса вакансий: ')
     print()
-    hh = HH() # Создаем объект класса HH для работы с вакансиями
-    vacancies = hh.get_vacancies(input_search) # Получаем вакансии по запросу
-    vacancies_ = JsonSaver() # Создаем объект класса JsonSaver для работы с вакансиями
-    vacancies_.write_vacancies(vacancies) # Сохраняем вакансии в JSON
-    vacancies_list = vacancies_.read_vacancies() # Читаем вакансии из JSON
+    hh = HH()  # Создаем объект класса HH для работы с вакансиями
+    vacancies = hh.get_vacancies(input_search)  # Получаем вакансии по запросу
+    vacancies_ = JsonSaver()  # Создаем объект класса JsonSaver для работы с вакансиями
+    vacancies_.write_vacancies(vacancies)  # Сохраняем вакансии в JSON
+    vacancies_list = vacancies_.read_vacancies()  # Читаем вакансии из JSON
     print('''Выберите необходимый пункт меню:
         1. Вывести все вакансии.
         2. Вывести отфильтрованные вакансии по имени или описанию.
