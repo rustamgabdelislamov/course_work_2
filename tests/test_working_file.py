@@ -83,12 +83,12 @@ def test_read_vacancies():
         assert len(vacancies) == 2
         assert vacancies[0].name == "Разработчик Python"
         assert vacancies[0].link == "https://example.com/vacancy1"
-        assert vacancies[0].salary['from'] == 1000
-        assert vacancies[0].salary['to'] == 1500
+        assert vacancies[0].salary_from == 1000
+        assert vacancies[0].salary_to == 1500
         assert vacancies[0].description == "Требуется опыт работы с Python."
 
         assert vacancies[1].name == "Frontend Developer"
         assert vacancies[1].link == "https://example.com/vacancy2"
-        assert vacancies[1].salary['from'] == 800
-        assert vacancies[1].salary['to'] == 1200
+        assert vacancies[1].salary_from == 800
+        assert vacancies[1].salary_to == 1200
         assert vacancies[1].description == "Ищем специалиста по JavaScript."

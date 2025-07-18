@@ -32,7 +32,7 @@ class Vacancy:
             return NotImplemented
         return (self.name == other.name and
                 self.link == other.link and
-                self.salary == other.salary and
+                self.salary_from == other.salary_from and self.salary_to == other.salary_to and
                 self.description == other.description)
 
     def __lt__(self, other):
